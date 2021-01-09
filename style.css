@@ -1,0 +1,131 @@
+/****COLORS****/
+/*   PRIMARY   */
+/*   NEUTRAL   */
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-size: 15px;
+  font-family: "Poppins", sans-serif;
+  background-color: #fafafa;
+}
+
+/****CONTAINER****/
+.container {
+  display: flex;
+  flex-direction: column;
+  margin: 100px 150px;
+  align-items: center;
+}
+
+/*   UPPER   */
+.upper {
+  text-align: center;
+  width: 620px;
+}
+.upper__top, .upper__mid {
+  font-size: 2.5em;
+  font-weight: 200;
+  color: #4c4e61;
+}
+.upper__mid {
+  font-weight: 600;
+}
+.upper__bot {
+  color: #a3a5ae;
+}
+
+/*   LOWER   */
+.lower {
+  display: flex;
+  margin-top: 50px;
+}
+.lower__left {
+  margin-right: 30px;
+  margin-top: 150px;
+}
+.lower__middle {
+  margin-right: 30px;
+}
+.lower__right {
+  margin-top: 150px;
+}
+.lower__section {
+  height: 250px;
+  width: 400px;
+  border-top: 5px solid;
+  border-radius: 10px;
+  padding: 30px;
+  box-shadow: 0 5px 20px 0 #a3a5ae;
+  transition: transform 0.5s;
+}
+.lower__section:hover {
+  transform: scale(1.05);
+}
+.lower__section--title {
+  font-size: 1.5em;
+  font-weight: 600;
+  color: #4c4e61;
+}
+.lower__section--text {
+  color: #a3a5ae;
+}
+.lower__section--img {
+  float: right;
+  margin-top: 30px;
+}
+
+#section-1 {
+  border-top-color: #45d3d3;
+}
+#section-2 {
+  border-top-color: #ea5353;
+  margin-bottom: 30px;
+}
+#section-3 {
+  border-top-color: #fcaf4a;
+}
+#section-4 {
+  border-top-color: #549ef2;
+}
+
+@media only screen and (max-width: 375px) {
+  .upper {
+    text-align: center;
+    width: 300px;
+  }
+  .upper__top, .upper__mid {
+    font-size: 1.5em;
+    font-weight: 200;
+    color: #4c4e61;
+  }
+  .upper__mid {
+    font-weight: 600;
+  }
+  .upper__bot {
+    color: #a3a5ae;
+  }
+
+  .lower {
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+  .lower__section {
+    width: 300px;
+    margin-bottom: 20px;
+  }
+  .lower__left {
+    margin-right: 0px;
+    margin-top: 50px;
+  }
+  .lower__middle {
+    margin-right: 0px;
+  }
+  .lower__right {
+    margin-top: 0px;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,162 @@
+/****COLORS****/
+/*   PRIMARY   */
+$red: hsl(0, 78%, 62%);
+$cyan: hsl(180, 62%, 55%);
+$orange: hsl(34, 97%, 64%);
+$blue: hsl(212, 86%, 64%);
+
+/*   NEUTRAL   */
+
+$very-Dark-Blue: hsl(234, 12%, 34%);
+$grayish-Blue: hsl(229, 6%, 66%);
+$very-Light-Gray: hsl(0, 0%, 98%);
+
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-size: 15px;
+  font-family: "Poppins", sans-serif;
+  background-color: $very-Light-Gray;
+}
+
+/****CONTAINER****/
+.container {
+  display: flex;
+  flex-direction: column;
+  margin: 100px 150px;
+  align-items: center;
+}
+
+/*   UPPER   */
+.upper {
+  text-align: center;
+  width: 620px;
+  &__top {
+    font-size: 2.5em;
+    font-weight: 200;
+    color: $very-Dark-Blue;
+  }
+
+  &__mid {
+    @extend .upper__top;
+    font-weight: 600;
+  }
+
+  &__bot {
+    color: $grayish-Blue;
+  }
+}
+
+/*   LOWER   */
+.lower {
+  display: flex;
+  margin-top: 50px;
+
+  &__left {
+    margin-right: 30px;
+    margin-top: 150px;
+  }
+
+  &__middle {
+    margin-right: 30px;
+  }
+
+  &__right {
+    margin-top: 150px;
+  }
+
+  &__section {
+    height: 250px;
+    width: 400px;
+    border-top: 5px solid;
+    border-radius: 10px;
+    padding: 30px;
+    box-shadow: 0 5px 20px 0 $grayish-Blue;
+    transition: transform 0.5s;
+
+    &:hover {
+      transform: scale(1.05);
+    }
+
+    &--title {
+      font-size: 1.5em;
+      font-weight: 600;
+      color: $very-Dark-Blue;
+    }
+
+    &--text {
+      color: $grayish-Blue;
+    }
+
+    &--img {
+      float: right;
+      margin-top: 30px;
+    }
+  }
+}
+
+#section {
+  &-1 {
+    border-top-color: $cyan;
+  }
+
+  &-2 {
+    border-top-color: $red;
+    margin-bottom: 30px;
+  }
+
+  &-3 {
+    border-top-color: $orange;
+  }
+
+  &-4 {
+    border-top-color: $blue;
+  }
+}
+
+@media only screen and (max-width: 375px) {
+  .upper {
+    text-align: center;
+    width: 300px;
+    &__top {
+      font-size: 1.5em;
+      font-weight: 200;
+      color: $very-Dark-Blue;
+    }
+
+    &__mid {
+      @extend .upper__top;
+      font-weight: 600;
+    }
+
+    &__bot {
+      color: $grayish-Blue;
+    }
+  }
+
+  .lower {
+    flex-direction: column;
+    justify-content: flex-start;
+
+    &__section {
+      width: 300px;
+      margin-bottom: 20px;
+    }
+
+    &__left {
+      margin-right: 0px;
+      margin-top: 50px;
+    }
+
+    &__middle {
+      margin-right: 0px;
+    }
+
+    &__right {
+      margin-top: 0px;
+    }
+  }
+}
